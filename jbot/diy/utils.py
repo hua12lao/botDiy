@@ -30,7 +30,7 @@ def myids(values, test_id):
 
 #myzdjr_chatIds = myids(diybotset['myzdjr_chatId'], my_chat_id)
 
-#myjoinTeam_chatIds = myids(diybotset['myjoinTeam_chatId'], my_chat_id)
+my_monitor_chatId = myids(diybotset['my_monitor_chatId'], my_chat_id)
 
 #shoptokenIds = myids(diybotset['shoptokenId'], my_chat_id)
 
