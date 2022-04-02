@@ -45,6 +45,7 @@ async def activityID(event):
             return
         msg = await jdbot.send_message(chat_id, f'【监控】 监测到`{name}` 环境变量！')
         group = f'[{event.chat.title}](https://t.me/c/{event.chat.id}/{event.message.id})'
+        messages = event.message.text.replace("`","")
         messages = event.message.text.split("\n")
         change = ""
         for message in messages:
