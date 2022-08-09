@@ -15,7 +15,7 @@ async def user(event):
         chat = await event.get_chat()
         await event.delete()
         # await asyncio.sleep(0.2)
-        msg = await client.send_message(chat.id, "**青云 监控正常**")
+        msg = await client.send_message(chat.id, "** 监控正常**")
         await asyncio.sleep(5)
         await client.delete_messages(chat.id, msg)
     except Exception as e:
@@ -37,8 +37,6 @@ async def activityID(event):
             name = "开卡有礼"
         elif "jd_zdjr_activity" in text:
             name = "组队瓜分"
-        elif "ShareGift_Id" in text:
-            name = "分享好友有礼"
         elif "jd_smiek_luckDraw_activityUrl" in text:
             name = "转盘抽奖"
         else:
@@ -72,12 +70,6 @@ async def activityID(event):
             if "OPEN_CARD" in event.message.text:
                 from ..diy.diy import openCard
                 await openCard()
-            elif "WxFan_IDS" in event.message.text:
-                from ..diy.diy import jd_wxFans
-                await jd_wxFans()
-            elif "ShareGift_Id" in event.message.text:
-                from ..diy.diy import jd_ShareGift
-                await jd_ShareGift()
             elif "jd_zdjr_activity" in event.message.text:
                 from ..diy.diy import gua_zdjr_new
                 await gua_zdjr_new()
